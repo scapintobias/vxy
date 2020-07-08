@@ -1,2 +1,6 @@
+import { Photography } from './portfolio';
+
 export * from './home';
-export * from './portfolio';
+export { Portfolio, Photography, Design } from './portfolio';
+export * from './contacts';
+export * from './about';
