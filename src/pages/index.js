@@ -1,4 +1,3 @@
 export * from './home';
-export { Portfolio, Photography, Design } from './portfolio';
-export * from './contacts';
-export * from './about';
+export { Portfolio } from './portfolio';
+export * from './info';

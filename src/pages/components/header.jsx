@@ -27,15 +27,36 @@ export const HomeHead = () => (
 					<circle id="instagram" fill="#ffff" cx="15.2" cy="4.9" r="1.2" />
 				</svg>
 			</a>
+
 			<NavLink to="/portfolio" className="link white hover-gold ph3">
 				PORTFOLIO
 			</NavLink>
-			<NavLink to="/about" className="link white hover-gold pr3">
-				ABOUT
+			<NavLink to="/info" className="link white hover-gold ">
+				INFO
 			</NavLink>
-			<NavLink to="/contacts" className="link white hover-gold ">
-				CONTACTS
-			</NavLink>
+		</div>
+	</section>
+);
+
+export const BtmHead = () => (
+	<section className="absolute z-max top-0 ph5 pt5 w-100 flex justify-between">
+		<div className="futura ttu white fw7 f15 ">
+			Design
+			<div className="pt6 futura fw4 white f1 ttu">
+				<p>Siti web</p>
+				<p>applicazioni</p>
+				<p className="pt5">branding</p>
+				<p>editoria</p>
+			</div>
+		</div>
+		<div className="futura ttu white f15 fw7 self-end tr">
+			fotografia
+			<div className="pt6 futura fw4 white f1 ttu">
+				<p>Ritratto</p>
+				<p>Prodotto</p>
+				<p>Architettura</p>
+				<p className="pt5">video</p>
+			</div>
 		</div>
 	</section>
 );
@@ -72,24 +93,22 @@ export const PortHead = () => (
 						<circle id="instagram" fill="#000" cx="15.2" cy="4.9" r="1.2" />
 					</svg>
 				</a>
+
 				<NavLink to="/portfolio" className="link black hover-black ph3">
 					PORTFOLIO
 				</NavLink>
-				<NavLink to="/about" className="link silver hover-gold pr3">
-					ABOUT
-				</NavLink>
-				<NavLink to="/contacts" className="link silver hover-gold ">
-					CONTACTS
+				<NavLink to="/info" className="link silver hover-gold">
+					INFO
 				</NavLink>
 			</div>
 		</section>
-		<div className="z-2  h23 flex w-100">
-			<p className="dib self-end futura ttu silver fw5">designer — photographer</p>
+		<div className="z-2  h2 flex w-100">
+			<p className="dib self-end futura ttu silver fw5">designer — fotografo</p>
 		</div>
 	</section>
 );
 
-export const AbHead = () => (
+export const InfoHead = () => (
 	<section className="w-80 center">
 		<section className="dib z-max pt4 w-100 flex justify-between">
 			<NavLink
@@ -121,19 +140,17 @@ export const AbHead = () => (
 						<circle id="instagram" fill="#000" cx="15.2" cy="4.9" r="1.2" />
 					</svg>
 				</a>
+
 				<NavLink to="/portfolio" className="link silver hover-black ph3">
 					PORTFOLIO
 				</NavLink>
-				<NavLink to="/about" className="link black hover-black pr3">
-					ABOUT
-				</NavLink>
-				<NavLink to="/contacts" className="link silver hover-gold ">
-					CONTACTS
+				<NavLink to="/info" className="link black hover-black">
+					INFO
 				</NavLink>
 			</div>
 		</section>
-		<div className="z-2 h23 flex w-100">
-			<p className="dib self-end futura ttu silver fw5">designer — photographer</p>
+		<div className="z-2 h2 flex w-100">
+			<p className="dib self-end futura ttu silver fw5">designer — fotografo</p>
 		</div>
 	</section>
 );
@@ -145,7 +162,7 @@ export const ContHead = () => (
 				to="/"
 				className="link futura black tracked-double hover-gold fw7 f15 z-max"
 			>
-				SCAPIN TOBIAS
+				SCAPIN TOBIASS
 			</NavLink>
 			<div className="futura black f3 fw5 self-end">
 				<a
@@ -181,8 +198,8 @@ export const ContHead = () => (
 				</NavLink>
 			</div>
 		</section>
-		<div className="z-2 h23 flex w-100">
-			<p className="dib self-end futura ttu silver fw5">designer — photographer</p>
+		<div className="z-2 h2 flex w-100">
+			<p className="dib self-end futura ttu silver fw5">designer — fotografo</p>
 		</div>
 	</section>
 );
