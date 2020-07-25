@@ -6,10 +6,10 @@ export const Portfolio = () => (
 		<PortHead />
 		<Wrapper>
 			<DoubleCard
-				back="./img/nasa.jpg"
-				title="astronauts"
+				back="./img/ypae.png"
+				title="yape"
 				subtitle="Corporate Image"
-				to="/"
+				to="/portfolio/yape"
 				color="white"
 			/>
 			<Card
