@@ -9,8 +9,8 @@ function PageContent() {
 	return (
 		<Switch>
 			<Route path="/" exact component={Home} />
-			<Route path="/portfolio" exact component={Portfolio} />
-			<Route path="/portfolio/yape" exact component={Yape} />
+			<Route path="/progetti" exact component={Portfolio} />
+			<Route path="/progetti/yape" exact component={Yape} />
 			<Route path="/info" exact component={Info} />
 		</Switch>
 	);
