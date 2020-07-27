@@ -8,11 +8,56 @@ export const Info = () => (
 	<main>
 		<InfoHead />
 		<Main>
-			<section className="flex justify-between">
-				<div className="w-40 h7 mr2 overflow-hidden">
+			<section className="flex db w-100 flex-column-m optima f3 lh-copy pb7 mb3 bb">
+				<div className="w-50 w-100-m mb5">
+					<p>Ma in realtà.</p>
+					<p className="mb3">In parole povere.</p>
+					<p className="mb3">Tu. Cosa fai?</p>
+				</div>
+				<div className="w-50 w-100-m">
+					<p>Grafica e Fotografia</p>
+					<p className="mb3">Entrambe sia analogiche che digitali</p>
+					<p className="mb3">
+						Mi posso occupare del vostro logo, del vostro catalogo, del vostro sito —
+						sia che abbiate un bar in centro a Milano, o una cantina nel Veneto
+						Orientale.
+					</p>
+					<p>
+						Posso scattarvi delle foto, che siano di prodotto, ritratti e sì, persino
+						al vostro matrimonio!
+					</p>
+					<p className="mt3">Qual è la conseguenza?</p>
+					<p className="mb5">Tutto mantiene una qualità costante.</p>
+					<p className="orange">Ma quanto costa?</p>
+					<p className="mt3">Dipende solo da voi, in base a cosa cercate. </p>
+					<p className="mt3">
+						Sia una{' '}
+						<a
+							href="https://www.alvolante.it/listino_auto/fiat-panda"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="dib link black hover-blue underline"
+						>
+							Panda
+						</a>{' '}
+						che una{' '}
+						<a
+							href="https://www.alvolante.it/listino_auto/lamborghini-aventador"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="dib link black hover-gold underline"
+						>
+							Lamborghini
+						</a>{' '}
+						hanno quattro ruote. Forse l'unica cosa in comune.
+					</p>
+				</div>
+			</section>
+			<section className="flex flex-column-m justify-between pb7 mb2 bb">
+				<div className="w-40 w-100-m mr0-m mb5 h7 mr2 overflow-hidden">
 					<img src="./img/02.png" alt="ritratto" className="obj-card" />
 				</div>
-				<div className="optima w-60 ml2 measure-narrow lh-copy fw4 f3 black">
+				<div className="optima w-50 w-100-m ml2 lh-copy fw4 f3 black">
 					La scelta di questa professione non è stata casuale. Non saprei proprio
 					dire quando esattamente sia successo.
 					<Br />
@@ -32,34 +77,28 @@ export const Info = () => (
 					famosi in tutto il mondo, siete nel posto giusto.
 					<Br />
 					<Br />
-					<div className="pt5 measure f4 fw4">
+					<div className="pt5 measure f4 f5-m fw4">
 						Laurea Triennale in Design della Comunicazione
 						<Br />
 						Laurea Magistrale in Design della Comunicazione
 						<Br />
 						<span className="fw6 ttu">politecnico di milano</span>
 					</div>
-					<p className="pt7 measure lh-copy f3 black">
-						<span className="fw6">Contatti</span>
-						<Br />
-						<Br />
-						<a
-							href="mailto:info@scapintobias.xyz?subject=Primo contatto"
-							className="link hover-gold black blink b"
-						>
-							Mail
-						</a>
-						<Br />
-						<a href="tel:+393402100166" className="link hover-gold black">
-							+39 340 210 0166
-						</a>
-						<Br />
-						<Br />
-						Portogruaro (VE)
-					</p>
-					<p className="pt6 measure lh-copy f4 black">Partita IVA: 04273780272</p>
 				</div>
 			</section>
+			<div className="mb6 optima measure lh-copy f3 black">
+				<p className="fw5 ttu pb4">Contatti</p>
+				<a
+					href="mailto:info@scapintobias.xyz?subject=Primo contatto"
+					className="link hover-gold black blink b pb3"
+				>
+					Mail
+				</a>
+
+				<a href="tel:+393402100166" className="link hover-gold black">
+					+39 340 210 0166
+				</a>
+			</div>
 		</Main>
 	</main>
 );

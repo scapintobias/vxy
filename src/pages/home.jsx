@@ -1,20 +1,25 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { IgW, Main, Img, Footer } from './components/components';
+import { IgW, Main, Img } from './components/components';
 
 export const Home = () => (
 	<main>
 		<div>
-			<header className="absolute z-max mt4 ph5 pb5 w-100 flex justify-between">
-				<div className="optima tracked-double white fw9 f2 ">SCAPIN TOBIAS</div>
-				<div className="flex optima white f2 fw3 self-end">
-					<IgW />
-					<NavLink to="/progetti" className="ttu link white hover-gold ph3">
-						progetti
-					</NavLink>
-					<NavLink to="/info" className="link white hover-gold ">
-						INFO
-					</NavLink>
+			<header className="absolute z-max  mt3 mt2-m ph2-m ph3 pb5 w-100 flex justify-between">
+				<div className="flex flex-column-m optima tracked white fw5 f3 ">
+					<p className="pr2">SCAPIN</p>
+					<p>TOBIAS</p>
+				</div>
+				<div className="flex items-end-m flex-column-m optima white f3 fw3 ">
+					<div className="flex items-end-m pb2-m flex-column-m ">
+						<NavLink to="/progetti" className="ttu link white hover-gold pr3 pr0-m">
+							progetti
+						</NavLink>
+						<NavLink to="/info" className="link white hover-gold pr3 pr0-m pb2-m">
+							INFO
+						</NavLink>
+						<IgW />
+					</div>
 				</div>
 			</header>
 			<a href="#content" className="whale z-2">
@@ -38,41 +43,40 @@ export const Home = () => (
 				</div>
 			</div>
 			<NavLink to="/progetti/yape">
-				<Img src="./img/ypae.png" class="mt4 pb3 dim">
-					<p className="optima f3 black fw5 pb2">Yape Srl</p>
-					<p className="optima f5 silver fw4">Immagine coordinata, 2018</p>
-				</Img>
+				<Img src="./img/ypae.png" class="w-50 w-100-m mt4 pb3 dim" />
+				<p className="optima f3 black fw5 pb2">Yape Srl</p>
+				<p className="optima f5 silver fw4">Immagine coordinata, 2018</p>
 			</NavLink>
-			<section className="w-100 h6" />
-			<section className="db mb3 h8">
-				<NavLink to="/progetti/yape" className="w-70 fr">
-					<div className="flex pb3">
-						<div className="bg-silver w-33 h7 hide-child overflow-hidden">
-							<img
-								className="child cover overflow-hidden"
-								alt="img"
-								src="./img/ypae.png"
-							/>
-						</div>
-						<div className="bg-silver w-33 mh3 h7 hide-child overflow-hidden">
-							<img
-								className="child cover overflow-hidden"
-								alt="img"
-								src="./img/ypae.png"
-							/>
-						</div>
-						<div className="bg-silver w-33 h7 hide-child overflow-hidden">
-							<img
-								className="child cover overflow-hidden"
-								alt="img"
-								src="./img/ypae.png"
-							/>
-						</div>
+			<section className="w-100 h5" />
+
+			<NavLink to="/progetti/yape" className="mb5">
+				<div className="flex pb3">
+					<div className="bg-silver w-33 h6 hide-child overflow-hidden">
+						<img
+							className="child cover overflow-hidden"
+							alt="img"
+							src="./img/ypae.png"
+						/>
 					</div>
-					<p className="optima f3 black fw5 pb2">Parole Prigioniere</p>
-					<p className="optima f5 silver fw4">Mostra fotografica, EXPO 2015</p>
-				</NavLink>
-			</section>
+					<div className="bg-silver w-33 mh3 h6 hide-child overflow-hidden">
+						<img
+							className="child cover overflow-hidden"
+							alt="img"
+							src="./img/ypae.png"
+						/>
+					</div>
+					<div className="bg-silver w-33 h6 hide-child overflow-hidden">
+						<img
+							className="child cover overflow-hidden"
+							alt="img"
+							src="./img/ypae.png"
+						/>
+					</div>
+				</div>
+				<p className="optima f3 black fw5 pb2">Parole Prigioniere</p>
+				<p className="optima f5 silver fw4">Mostra fotografica, EXPO 2015</p>
+			</NavLink>
+
 			<section className="w-100 h5" />
 
 			<NavLink to="/progetti/yape" className="db w-80 h8">
@@ -98,7 +102,5 @@ export const Home = () => (
 			</NavLink>
 			<section className="w-100 h4 mv4" />
 		</Main>
-
-		<Footer />
 	</main>
 );

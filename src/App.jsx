@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
+import { __RouterContext } from 'react-router';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './type.css';
 import './index.css';
+
 import { Home, Portfolio, Info, Yape } from './pages';
+
+import { Footer } from './pages/components/components';
+
+function useRouter() {
+	return useContext(__RouterContext);
+}
+
+function ScrollToTop({ children }) {
+	const {
+		location: { pathname },
+	} = useRouter();
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname]);
+
+	return children || null;
+}
 
 function PageContent() {
 	return (
@@ -19,9 +39,12 @@ function PageContent() {
 export default function App() {
 	return (
 		<Router>
-			<div style={{ overflow: 'hidden' }}>
-				<PageContent />
-			</div>
+			<ScrollToTop>
+				<div style={{ overflow: 'hidden' }}>
+					<PageContent />
+				</div>
+			</ScrollToTop>
+			<Footer />
 		</Router>
 	);
 }

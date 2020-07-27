@@ -1,30 +1,52 @@
 import React from 'react';
 import CN from 'classnames';
 
-export const Wrapper = ({ children }) => (
-	<section className="flex ph5 flex-wrap ">{children}</section>
-);
-
 export const Main = ({ children }) => (
-	<section className="w-100 ph5 center mt4 mb4">{children}</section>
-);
-
-export const Img = (props) => (
-	<section className="dib">
-		<img src={props.src} alt="img" className={CN(props.class)} />
-		<div>{props.children}</div>
+	<section className="w-100 overflow-hidden ph3 ph2-m center mv4">
+		{children}
 	</section>
 );
 
+export const Img = (props) => (
+	<div className={props.class}>
+		<img src={props.src} alt="img" className="whale" />
+		{props.children}
+	</div>
+);
+
 export const Tit = (props) => (
-	<section className="mv4 bt pt3">
-		<div className="futura ttu f1 fw7">{props.title}</div>
-		<div className="bodoni pt2 f2">{props.subtitle}</div>
+	<section className="black mh3 optima absolute z-max bottom-0 mb3">
+		<div className=" ttu f1 fw5 tracked-tight">{props.title}</div>
+		<div className="f5 silver ttu">{props.subtitle}</div>
+	</section>
+);
+
+export const ProH = (props) => (
+	<section>
+		<section className="vh-95">
+			<div>{props.children}</div>
+			<section className="absolute black optima  bottom-0 mb3">
+				<div className=" ttu f1 fw5 tracked-tight">{props.title}</div>
+				<div className="f5 silver ttu">{props.subtitle}</div>
+			</section>
+		</section>
+	</section>
+);
+
+export const Place = (props) => (
+	<section className={props.dims}>
+		<div className="bg-silver dim whale" />
+		<div className="db mt3">
+			<p className="optima f3 black fw5 pb2">{props.title}</p>
+			<p className="optima f6 silver fw4 ttu">
+				{props.group} - {props.anno}
+			</p>
+		</div>
 	</section>
 );
 
 export const Flex = ({ children }, props) => (
-	<section className={('flex', props.class)}>{children}</section>
+	<section className={CN('flex', props.class)}>{children}</section>
 );
 
 export const IgW = () => (
@@ -34,7 +56,7 @@ export const IgW = () => (
 		rel="noopener noreferrer"
 		className="dib"
 	>
-		<svg x="0px" y="0px" width="25px" height="25px" id="insta">
+		<svg x="0px" y="0px" width="22px" height="22px" id="insta">
 			<path
 				id="instagram"
 				fill="#ffff"
@@ -59,7 +81,7 @@ export const IgB = () => (
 		rel="noopener noreferrer"
 		className="dib"
 	>
-		<svg x="0px" y="0px" width="25px" height="25px" id="insta">
+		<svg x="0px" y="0px" width="22px" height="22px" id="insta">
 			<path
 				id="instagram"
 				fill="#000"
@@ -78,9 +100,9 @@ export const IgB = () => (
 );
 
 export const Footer = () => (
-	<section className="optima silver mh2 mv3 h1 flex justify-between flex-row w-100">
-		<div className="">© 2020 Tobias Scapin</div>
-		<div className="">Via Pastrengo 4 — 30026 Portogruaro (VE)</div>
-		<div className="mr3">+39 3402100166 — info@scapintobias.xyz</div>
+	<section className="optima silver mh2 mb2 flex flex-row justify-between dn-t dn-m">
+		<div>© 2020 Tobias Scapin</div>
+		<div>Via Pastrengo 4 — 30026 Portogruaro (VE)</div>
+		<div>+39 3402100166 — info@scapintobias.xyz</div>
 	</section>
 );
