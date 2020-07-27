@@ -9,7 +9,7 @@ export const Yape = () => (
 		<PortHead />
 		<Main>
 			<ProH title="Yape" subtitle="immagine coordinata - 2018">
-				<video src="../img/yape/yape.mp4" className="whale" />
+				<video src="../img/yape/yape.mp4" className="whale" autoPlay />
 			</ProH>
 
 			<div className=" bg-light-gray w-100 mb7">
