@@ -1,5 +1,6 @@
 import React from 'react';
 import CN from 'classnames';
+import { NavLink } from 'react-router-dom';
 
 export const Main = ({ children }) => (
 	<section className="w-100 overflow-hidden ph3 ph2-m center mv4">
@@ -45,10 +46,31 @@ export const Place = (props) => (
 	</section>
 );
 
-export const Flex = ({ children }, props) => (
-	<section className={CN('flex', props.class)}>{children}</section>
+export const Flex = (props) => (
+	<section className={CN('flex', props.class, props.width)}>
+		{props.children}
+	</section>
 );
-
+export const Five7 = (props) => (
+	<NavLink to={props.to} className={props.container}>
+		<article className={props.article}>
+			<div className="aspect-ratio aspect-ratio--5x7">
+				<div
+					className="aspect-ratio--object cover"
+					style={{
+						background: `url(${props.background}) no-repeat top center`,
+					}}
+				/>
+			</div>
+		</article>
+		<div className="db mt3">
+			<p className="optima f3 black fw5 pb2">{props.title}</p>
+			<p className="optima f6 silver fw4 ttu">
+				{props.group} - {props.anno}
+			</p>
+		</div>
+	</NavLink>
+);
 export const IgW = () => (
 	<a
 		href="https://www.instagram.com/discipline.design"

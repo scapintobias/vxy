@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { IgW, Main, Img } from './components/components';
+import { IgW, Main, Img, Flex } from './components/components';
 
 export const Home = () => (
 	<main>
@@ -27,21 +27,22 @@ export const Home = () => (
 				<img
 					src="./img/nasa.jpg"
 					alt="home"
-					className=" overflow-hidden obj-cover border-box z-10"
+					className=" overflow-hidden obj-cover border-box z-1"
 				/>
 			</a>
 		</div>
-		<span id="content" />
-		<Main>
-			<div className="flex db w-100 flex-column optima f3 lh-copy mb6">
-				<div className="self-end">
-					<p>Le anatre depongono le loro uova in silenzio.</p>
-					<p>Le galline invece schiamazzano come impazzite.</p>
-					<p className="mt3">Qual è la conseguenza?</p>
-					<p className="mb3">Tutto il mondo mangia uova di gallina.</p>
-					<p className="tr f4 silver">Henry Ford</p>
-				</div>
+		<div id="content" />
+
+		<div className="flex db w-100 flex-column optima f3 f27-m lh-copy mb6 mt4 mh3-m">
+			<div className="self-end mr3">
+				<p>Le anatre depongono le loro uova in silenzio.</p>
+				<p>Le galline invece schiamazzano come impazzite.</p>
+				<p className="mt3">Qual è la conseguenza?</p>
+				<p className="mb3">Tutto il mondo mangia uova di gallina.</p>
+				<p className="tr f4 silver mr3-m">Henry Ford</p>
 			</div>
+		</div>
+		<Main>
 			<NavLink to="/progetti/yape">
 				<Img src="./img/ypae.png" class="w-50 w-100-m mt4 pb3 dim" />
 				<p className="optima f3 black fw5 pb2">Yape Srl</p>
@@ -49,33 +50,7 @@ export const Home = () => (
 			</NavLink>
 			<section className="w-100 h5" />
 
-			<NavLink to="/progetti/yape" className="mb5">
-				<div className="flex pb3">
-					<div className="bg-silver w-33 h6 hide-child overflow-hidden">
-						<img
-							className="child cover overflow-hidden"
-							alt="img"
-							src="./img/ypae.png"
-						/>
-					</div>
-					<div className="bg-silver w-33 mh3 h6 hide-child overflow-hidden">
-						<img
-							className="child cover overflow-hidden"
-							alt="img"
-							src="./img/ypae.png"
-						/>
-					</div>
-					<div className="bg-silver w-33 h6 hide-child overflow-hidden">
-						<img
-							className="child cover overflow-hidden"
-							alt="img"
-							src="./img/ypae.png"
-						/>
-					</div>
-				</div>
-				<p className="optima f3 black fw5 pb2">Parole Prigioniere</p>
-				<p className="optima f5 silver fw4">Mostra fotografica, EXPO 2015</p>
-			</NavLink>
+			
 
 			<section className="w-100 h5" />
 
@@ -86,21 +61,42 @@ export const Home = () => (
 			</NavLink>
 			<section className="w-100 h7 mv4" />
 
-			<NavLink to="/progetti/yape" className="h7">
-				<section className="db w-90 mb7 flex fr static">
-					<div className="db w-50 mr2 ">
-						<div className="bg-silver h6 mb3 dim" />
-						<p className="optima f3 black fw5 pb2 dim">Parole Prigioniere</p>
-						<p className="optima f5 silver fw4">Mostra fotografica, EXPO 2015</p>
-					</div>
-					<div className="db w-50 ml2 ">
-						<div className="bg-silver h6 mb3 dim" />
-						<p className="optima f3 black fw5 pb2">Parole Prigioniere</p>
-						<p className="optima f5 silver fw4">Mostra fotografica, EXPO 2015</p>
-					</div>
-				</section>
-			</NavLink>
-			<section className="w-100 h4 mv4" />
+	
+			<section className="w-100 h5 mb2 bb" />
+			<Flex width="w-60 w-100-m" class="justify-between flex-column-m optima mb4 h-auto">
+				<div className="w-100-m w-50 h7 db h-auto-m mb4-m">
+					<p className="f2 fw5 pb4">Design</p>
+					<p className="f3 fw4 pb2">Immagine coordinata</p>
+					<p className="f4 silver fw4 pb4 w-80 lh-copy">
+						Marchio, logo, logotipo, manuale d'immagine coordinata
+					</p>
+					<p className="f3 fw4 pb2">Materiale editoriale</p>
+					<p className="f4 silver fw4 pb4 w-80 lh-copy">
+						Cataloghi, riviste, impaginati
+					</p>
+					<p className="f3 fw4 pb2">Mostre e fiere</p>
+					<p className="f4 silver fw4 pb2 w-80">
+						Progettazione di allestimenti e materiale promozionale
+					</p>
+				</div>
+				<div className="w-100-m w-50 h7 h-auto-m mb4-m">
+					<p className="f2 fw5 pb4">Digitale</p>
+					<p className="f3 fw4 pb2">Siti web, App</p>
+					<p className="f4 silver fw4 pb4 w-80 lh-copy">
+						Progettazione di siti web e applicazioni, di ogni ordine di complessità
+					</p>
+					<p className="f3 fw4 pb2">Multimedia</p>
+					<p className="f4 silver fw4 pb2 w-80 lh-copy">
+						Realizzazione di video promozionali, sia in ripresa che in motion
+						graphics, o la combinazione tra le due
+					</p>
+					<p className="f3 fw4 pb2">Fotografia</p>
+					<p className="f4 silver fw4 pb2 w-80 lh-copy">
+						Realizzazione di fotografia commerciale, di prodotto, di architettura,
+						contenuti per siti web
+					</p>
+				</div>
+			</Flex>
 		</Main>
 	</main>
 );

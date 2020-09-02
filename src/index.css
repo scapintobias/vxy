@@ -289,7 +289,7 @@ ul {
 	opacity: 0.2;
 	position: absolute;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 }
 
 .dark {
@@ -7549,7 +7549,10 @@ code {
 	.f25-m {
 		font-size: 2rem;
 	}
-
+	.f27-m {
+		font-size: 1.7rem;
+	}
+	
 	.f3-m {
 		font-size: 1.5rem;
 	}
