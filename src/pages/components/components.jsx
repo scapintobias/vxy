@@ -1,6 +1,8 @@
 import React from 'react';
 import CN from 'classnames';
 import { NavLink } from 'react-router-dom';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 export const Main = ({ children }) => (
 	<section className="w-100 overflow-hidden ph3 ph2-m center mv4">
@@ -14,6 +16,8 @@ export const Img = (props) => (
 		{props.children}
 	</div>
 );
+
+export const Spacer = (props) => <div className={CN('flex w-100', props.h)} />;
 
 export const Tit = (props) => (
 	<section className="black mh3 optima absolute z-max bottom-0 mb3">
@@ -39,11 +43,21 @@ export const Place = (props) => (
 		<div className="bg-silver dim whale" />
 		<div className="db mt3">
 			<p className="optima f3 black fw5 pb2">{props.title}</p>
-			<p className="optima f6 silver fw4 ttu">
-				{props.group} - {props.anno}
-			</p>
+			<p className="optima f6 silver fw4 ttu">{props.group}</p>
 		</div>
 	</section>
+);
+
+export const PlaceT = (props) => (
+	<article className={props.article}>
+		<div className="aspect-ratio aspect-ratio--5x7">
+			<div className="aspect-ratio--object cover">{props.children}</div>
+		</div>
+	</article>
+);
+
+export const BoxT = (props) => (
+	<section className="bt bb b--silver pv3">{props.children}</section>
 );
 
 export const Flex = (props) => (
@@ -51,7 +65,8 @@ export const Flex = (props) => (
 		{props.children}
 	</section>
 );
-export const Five7 = (props) => (
+
+export const Tall = (props) => (
 	<NavLink to={props.to} className={props.container}>
 		<article className={props.article}>
 			<div className="aspect-ratio aspect-ratio--5x7">
@@ -63,14 +78,142 @@ export const Five7 = (props) => (
 				/>
 			</div>
 		</article>
-		<div className="db mt3">
-			<p className="optima f3 black fw5 pb2">{props.title}</p>
-			<p className="optima f6 silver fw4 ttu">
-				{props.group} - {props.anno}
-			</p>
+		<div className="db mt2 mt1-m">
+			<p className="optima f3 f4-m black fw5 pb2 pb1-m">{props.title}</p>
+			<p className="optima f6 silver fw4 ttu">{props.group}</p>
 		</div>
 	</NavLink>
 );
+
+export const TallE = (props) => (
+	<a
+		href={props.to}
+		className={props.container}
+		noOpener
+		noReferrer
+		target="blank"
+	>
+		<article className={props.article}>
+			<div className="aspect-ratio aspect-ratio--5x7">
+				<div
+					className="aspect-ratio--object cover"
+					style={{
+						background: `url(${props.background}) no-repeat top center`,
+					}}
+				/>
+			</div>
+		</article>
+		<div className="db mt2 mt1-m">
+			<p className="optima f3 f4-m black fw5 pb2 pb1-m">{props.title}</p>
+			<p className="optima f6 silver fw4 ttu">{props.group}</p>
+		</div>
+	</a>
+);
+
+export const StaTall = (props) => (
+	<section className={props.container}>
+		<article className={props.article}>
+			<div className="aspect-ratio aspect-ratio--5x7">
+				<Zoom>
+					<img src={props.background} className="whale" alt="img" />
+				</Zoom>
+			</div>
+		</article>
+		<div className="db mt2 mt1-m">
+			<p className="optima f3 f4-m black fw5 pb2 pb1-m">{props.title}</p>
+			<p className="optima f6 silver fw4 ttu">{props.group}</p>
+		</div>
+	</section>
+);
+
+export const Land = (props) => (
+	<NavLink to={props.to} className={props.container}>
+		<article className={props.article}>
+			<div className="aspect-ratio aspect-ratio--7x5">
+				<div
+					className="aspect-ratio--object cover"
+					style={{
+						background: `url(${props.background}) no-repeat top right`,
+					}}
+				/>
+			</div>
+		</article>
+		<div className="db mt2 mt1-m">
+			<p className="optima f3 f4-m black fw5 pb2 pb1-m">{props.title}</p>
+			<p className="optima f6 silver fw4 ttu">{props.group}</p>
+		</div>
+	</NavLink>
+);
+
+export const LandE = (props) => (
+	<a
+		href={props.to}
+		className={props.container}
+		noOpener
+		noReferrer
+		target="blank"
+	>
+		<article className={props.article}>
+			<div className="aspect-ratio aspect-ratio--7x5">
+				<div
+					className="aspect-ratio--object cover"
+					style={{
+						background: `url(${props.background}) no-repeat top right`,
+					}}
+				/>
+			</div>
+		</article>
+		<div className="db mt2 mt1-m">
+			<p className="optima f3 f4-m black fw5 pb2 pb1-m">{props.title}</p>
+			<p className="optima f6 silver fw4 ttu">{props.group}</p>
+		</div>
+	</a>
+);
+
+export const StaLand = (props) => (
+	<section className={props.container}>
+		<article className={props.article}>
+			<div className="aspect-ratio aspect-ratio--7x5">
+				<div
+					className="aspect-ratio--object cover"
+					style={{
+						background: `url(${props.background}) no-repeat top center`,
+					}}
+				/>
+			</div>
+		</article>
+		<div className="db mt2 mt1-m">
+			<p className="optima f3 f4-m black fw5 pb2 pb1-m">{props.title}</p>
+			<p className="optima f6 silver fw4 ttu">{props.group}</p>
+		</div>
+	</section>
+);
+
+export const StaLandV = (props) => (
+	<section className="flex flex-column w-100">
+		<section className={props.container}>
+			<video
+				src={props.background}
+				autoPlay
+				loop
+				muted
+				className="whale ba b--silver"
+			/>
+
+			<div className="db mt2 mt1-m">
+				<p className="optima f3 f4-m black fw5 pb2 pb1-m">{props.title}</p>
+				<p className="optima f6 silver fw4 ttu">{props.group}</p>
+			</div>
+		</section>
+	</section>
+);
+
+export const Link = (props) => (
+	<a href={props.to} noOpener noReferrer target="blank" className={props.class}>
+		{props.children}
+	</a>
+);
+
 export const IgW = () => (
 	<a
 		href="https://www.instagram.com/discipline.design"
@@ -119,12 +262,4 @@ export const IgB = () => (
 			<circle id="instagram" fill="#000" cx="15.2" cy="4.9" r="1.2" />
 		</svg>
 	</a>
-);
-
-export const Footer = () => (
-	<section className="optima silver mh2 mb2 flex flex-row justify-between dn-t dn-m">
-		<div>© 2020 Tobias Scapin</div>
-		<div>Via Pastrengo 4 — 30026 Portogruaro (VE)</div>
-		<div>+39 3402100166 — info@scapintobias.xyz</div>
-	</section>
 );

@@ -7,8 +7,6 @@ import './index.css';
 
 import { Home, Portfolio, Info, Yape } from './pages';
 
-import { Footer } from './pages/components/components';
-
 function useRouter() {
 	return useContext(__RouterContext);
 }
@@ -44,7 +42,6 @@ export default function App() {
 					<PageContent />
 				</div>
 			</ScrollToTop>
-			<Footer />
 		</Router>
 	);
 }
