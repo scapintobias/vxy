@@ -1,0 +1,34 @@
+.slides {
+	position: relative;
+}
+
+.slick-prev,
+.slick-next {
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	transform: translate(0, -50%);
+	cursor: pointer;
+	border: none;
+	outline: none;
+	z-index: 5;
+}
+
+.slick-prev:before {
+	margin-left: -3rem;
+}
+
+.slick-next:before {
+	margin-left: 2rem;
+}
+
+.slick-prev:before,
+.slick-next:before {
+	font-family: 'slick';
+	font-size: 2rem;
+	opacity: 0.6;
+	color: black;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+

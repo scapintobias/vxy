@@ -1610,12 +1610,15 @@ code {
 .w-40 {
 	width: 40%;
 }
+
 .w-45 {
 	width: 45%;
 }
+
 .w-48 {
 	width: 48%;
 }
+
 .w-50 {
 	width: 50%;
 }
@@ -1643,6 +1646,7 @@ code {
 .w-90 {
 	width: 90%;
 }
+
 .w-95 {
 	width: 92%;
 }
@@ -3128,6 +3132,10 @@ code {
 
 .mauto {
 	margin: 0 auto;
+}
+
+.pt-half {
+	padding-top: 30%;
 }
 
 .ma0 {

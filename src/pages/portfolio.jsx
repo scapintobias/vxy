@@ -1,49 +1,39 @@
 import React from 'react';
 import { PortHead } from './components/header';
+
 import {
 	Main,
-	Place,
 	Tall,
 	StaTall,
-	TallE,
 	StaLand,
-	PlaceT,
 	Flex,
 	Link,
 	Land,
 	LandE,
 	Spacer,
-	BoxT,
 	StaLandV,
-	Img,
 } from './components/components';
-import { NavLink } from 'react-router-dom';
+
+import Lima from './components/slider';
 
 export const Portfolio = () => (
 	<main>
 		<PortHead />
-		
+
 		<Main>
-		<Spacer h="h4" />
-		<div className="near-black flex db w-70 center optima f3 fw5-m f5-m lh-copy">
-			<div className="mr3">
-				<p>Le anatre depongono le loro uova in silenzio.</p>
-				<p>Le galline invece schiamazzano come impazzite.</p>
-				<p className="mt3">Qual è la conseguenza?</p>
-				<p className="mb3">Tutto il mondo mangia uova di gallina.</p>
-				<p className="f4 f6-m silver mr3-m">Henry Ford</p>
+			<Spacer h="h4" />
+			<div className="near-black flex db w-70 w-100-m center optima f3 fw5-m f5-m lh-copy">
+				<div className="mr3">
+					<p>Le anatre depongono le loro uova in silenzio.</p>
+					<p>Le galline invece schiamazzano come impazzite.</p>
+					<p className="mt3">Qual è la conseguenza?</p>
+					<p className="mb3">Tutto il mondo mangia uova di gallina.</p>
+					<p className="f4 f6-m silver mr3-m">Henry Ford</p>
+				</div>
 			</div>
-		</div>
-		<Spacer h="h5" />
-			<Land
-				to="/progetti/yape"
-				container="w-70 center w-100-m"
-				article="dim"
-				background="./img/lima/4.png"
-				title="Metro de Lima"
-				group="segnaletica"
-			/>
-			<Spacer h="h5 h3-m" />
+			<Spacer h="h5" />
+			<Lima />
+			<Spacer h="h5" />
 
 			<Flex
 				width="w-70 w-100-m"

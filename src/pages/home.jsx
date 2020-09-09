@@ -1,10 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import {
-	IgW,
-	Main,
-	Flex,
-} from './components/components';
+import { IgW } from './components/components';
 
 export const Home = () => (
 	<main>
@@ -26,7 +22,6 @@ export const Home = () => (
 					</div>
 				</div>
 			</header>
-		
 
 			<div className="overlay z-5" />
 			<img
@@ -35,7 +30,5 @@ export const Home = () => (
 				className=" overflow-hidden obj-cover border-box z-2"
 			/>
 		</div>
-	
-
 	</main>
 );

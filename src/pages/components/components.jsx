@@ -1,6 +1,7 @@
 import React from 'react';
 import CN from 'classnames';
 import { NavLink } from 'react-router-dom';
+
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 
@@ -89,8 +90,8 @@ export const TallE = (props) => (
 	<a
 		href={props.to}
 		className={props.container}
-		noOpener
-		noReferrer
+		noopener
+		noreferrer
 		target="blank"
 	>
 		<article className={props.article}>
@@ -145,12 +146,23 @@ export const Land = (props) => (
 	</NavLink>
 );
 
+export const SlImg = (props) => (
+	<div className="aspect-ratio aspect-ratio--7x5">
+		<div
+			className="aspect-ratio--object cover"
+			style={{
+				background: `url(${props.src}) no-repeat top center`,
+			}}
+		/>
+	</div>
+);
+
 export const LandE = (props) => (
 	<a
 		href={props.to}
 		className={props.container}
-		noOpener
-		noReferrer
+		noopener
+		noreferrer
 		target="blank"
 	>
 		<article className={props.article}>
@@ -200,7 +212,7 @@ export const StaLandV = (props) => (
 );
 
 export const Link = (props) => (
-	<a href={props.to} noOpener noReferrer target="blank" className={props.class}>
+	<a href={props.to} noopener noreferrer target="blank" className={props.class}>
 		{props.children}
 	</a>
 );
