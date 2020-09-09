@@ -119,7 +119,7 @@ export const StaTall = (props) => (
 				</Zoom>
 			</div>
 		</article>
-		<div className="db mt2 mt1-m">
+		<div className={CN('mt2 mt1-m', props.class)}>
 			<p className="optima f3 f4-m black fw5 pb2 pb1-m">{props.title}</p>
 			<p className="optima f6 silver fw4 ttu">{props.group}</p>
 		</div>
@@ -133,7 +133,7 @@ export const Land = (props) => (
 				<div
 					className="aspect-ratio--object cover"
 					style={{
-						background: `url(${props.background}) no-repeat top right`,
+						background: `url(${props.background}) no-repeat top center`,
 					}}
 				/>
 			</div>
@@ -158,7 +158,7 @@ export const LandE = (props) => (
 				<div
 					className="aspect-ratio--object cover"
 					style={{
-						background: `url(${props.background}) no-repeat top right`,
+						background: `url(${props.background}) no-repeat top center`,
 					}}
 				/>
 			</div>
@@ -174,12 +174,9 @@ export const StaLand = (props) => (
 	<section className={props.container}>
 		<article className={props.article}>
 			<div className="aspect-ratio aspect-ratio--7x5">
-				<div
-					className="aspect-ratio--object cover"
-					style={{
-						background: `url(${props.background}) no-repeat top center`,
-					}}
-				/>
+				<Zoom>
+					<img src={props.background} className="whale" alt="img" />
+				</Zoom>
 			</div>
 		</article>
 		<div className="db mt2 mt1-m">
@@ -192,13 +189,7 @@ export const StaLand = (props) => (
 export const StaLandV = (props) => (
 	<section className="flex flex-column w-100">
 		<section className={props.container}>
-			<video
-				src={props.background}
-				autoPlay
-				loop
-				muted
-				className="whale ba b--silver"
-			/>
+			<video src={props.background} autoPlay loop muted className="whale" />
 
 			<div className="db mt2 mt1-m">
 				<p className="optima f3 f4-m black fw5 pb2 pb1-m">{props.title}</p>

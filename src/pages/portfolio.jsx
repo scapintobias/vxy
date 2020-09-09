@@ -22,8 +22,10 @@ import { NavLink } from 'react-router-dom';
 export const Portfolio = () => (
 	<main>
 		<PortHead />
-		<Spacer h="h2" />
-		<div className="ml3 ml2-m near-black flex db w-100 mt6 mt4-m optima f3 fw5-m f5-m lh-copy z-999">
+		
+		<Main>
+		<Spacer h="h4" />
+		<div className="near-black flex db w-70 center optima f3 fw5-m f5-m lh-copy">
 			<div className="mr3">
 				<p>Le anatre depongono le loro uova in silenzio.</p>
 				<p>Le galline invece schiamazzano come impazzite.</p>
@@ -32,8 +34,7 @@ export const Portfolio = () => (
 				<p className="f4 f6-m silver mr3-m">Henry Ford</p>
 			</div>
 		</div>
-		<Spacer h="h4" />
-		<Main>
+		<Spacer h="h5" />
 			<Land
 				to="/progetti/yape"
 				container="w-70 center w-100-m"
@@ -42,7 +43,33 @@ export const Portfolio = () => (
 				title="Metro de Lima"
 				group="segnaletica"
 			/>
-			<Spacer h="h6 h3-m" />
+			<Spacer h="h5 h3-m" />
+
+			<Flex
+				width="w-70 w-100-m"
+				class="optima center flex-column-m flex-column-t justify-between bb bt pv3 b--silver"
+			>
+				<div className="w-40 w-90-m w-90-t  flex flex-column justify-between">
+					<div class="silver f2 ttu">portraits boutique</div>
+					<div className=" silver f3 f4-l f4-t f4-m lh-copy mv3 mr3">
+						È un progetto di fotografia ritrattistica iniziato nel 2008, con un suo
+						sito web completamente dedicato, che raccoglie la maggior parte dei miei
+						scatti.
+					</div>
+					<Link
+						to="https://portraits.boutique"
+						class=" silver hover-gold f1 link dim blink mv5-t mv5-m"
+					>
+						Visita
+					</Link>
+				</div>
+				<StaTall
+					container="w-60 w-100-t w-100-m center-m"
+					background="./img/prigioniere/poster.png"
+					class="dn"
+				/>
+			</Flex>
+			<Spacer h="h5 h3-m" />
 			<Flex width="w-100" class="flex-column-m justify-center">
 				<Flex width="w-45 w-100-m" class="flex-column mr3 mr0-m">
 					<Tall
@@ -82,7 +109,7 @@ export const Portfolio = () => (
 					/>
 				</Flex>
 			</Flex>
-			<Spacer h="h4 h3-m" />
+			<Spacer h="h5 h3-m" />
 			<Link to="https://youtu.be/IhxD--LuNA0" class="link dim">
 				<StaLandV
 					container="center w-95 w-100-m mb6-m"
@@ -91,34 +118,9 @@ export const Portfolio = () => (
 					group="video • in collaborazione con e-Novia"
 				/>
 			</Link>
-			<Spacer h="h4 h3-m bb b--silver mb3" />
 
-			<Flex width="w-100" class="optima flex-column-m justify-between">
-				<div className="w-40 w-90-m  flex flex-column justify-between">
-					<div class="silver f2 ttu v-top">portraits boutique</div>
-					<div className=" silver f3 lh-copy">
-						È un progetto di fotografia ritrattistica iniziato nel 2008, con un suo
-						sito web completamente dedicato, che raccoglie la maggior parte dei miei
-						scatti.
-					</div>
-					<Link
-						to="https://portraits.boutique"
-						class=" silver hover-gold f1 link dim blink"
-					>
-						Visita
-					</Link>
-				</div>
-				<TallE
-					to="https://www.portraits.boutique/projects/prigioniere"
-					container="w-30 w-70-m center-m"
-					article="dim ba b--silver"
-					background="./img/prigioniere/poster.png"
-					title="Parole Prigioniere"
-					group="mostra fotografica"
-				/>
-			</Flex>
+			<Spacer h="h5 h3-m" />
 
-			<Spacer h="h4 h3-m bt b--silver mt3" />
 			<Land
 				to="/progetti/yape"
 				container="w-70 center w-100-m"
@@ -127,25 +129,54 @@ export const Portfolio = () => (
 				title="Borromeo 5"
 				group="immagine coordinata"
 			/>
-			<Spacer h="h4 h3-m" />
-			<Flex width="w-70" class="center">
-				<Tall
-					to="/progetti/yape"
-					container="w-50 mr2 w-100-m"
-					article="dim bg-light-gray"
-					background="./img/syneco/syneco_5.png"
-					title="Syneco"
-					group="immagine coordinata"
-				/>
-				<Tall
-					to="/progetti/yape"
-					container="w-50 ml2 w-100-m"
-					article="dim"
-					background="./img/manin/manin_8.png"
-					title="Villa Manin"
-					group="poster"
-				/>
+			<Spacer h="h5 h3-m" />
+			<Flex width="w-100" class="flex-column-m justify-center">
+				<Flex width="w-45 w-100-m" class="flex-column mr3 mr0-m">
+					<Land
+						to="/progetti/yape"
+						container="w-100-m mb4"
+						article="dim  bg-light-gray"
+						background="./img/manin/manin_1.png"
+						title="Villa Manin"
+						group="immagine coordinata"
+					/>
+					<Tall
+						to="/progetti/yape"
+						container="w-70-m center-m mb4"
+						article="dim"
+						background="./img/manin/manin_8.png"
+						title="Villa Manin"
+						group="serie di poster"
+					/>
+				</Flex>
+				<Flex width="w-45 w-100-m" class="flex-column ml3 ml0-m">
+					<StaTall
+						container="w-100-m mb4"
+						article="dim"
+						background="/img/mourn.png"
+						title="Mourn"
+						group="poster"
+					/>
+					<StaLand
+						container="w-100-m mb4"
+						article="dim ba b--light-silver"
+						background="./img/Timeline.png"
+						title="Josef Müller Brockmann"
+						group="poster • timeline"
+					/>
+				</Flex>
 			</Flex>
+			<Spacer h="h5 h3-m" />
+
+			<LandE
+				to="https://www.ideascudo.com/homepage/"
+				container="w-70 mr3 w-100-m center"
+				article="dim bg-light-gray"
+				background="./img/ideascudo/ideascudo_1.png"
+				title="Ideascudo"
+				group="logo"
+			/>
+
 			<Spacer h="h4 h3-m" />
 		</Main>
 	</main>
