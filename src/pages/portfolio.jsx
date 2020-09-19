@@ -22,25 +22,36 @@ export const Portfolio = () => (
 
 		<Main>
 			<Spacer h="h4" />
-			<div className="near-black flex db w-70 w-100-m center optima f3 fw5-m f5-m lh-copy">
-				<div className="mr3">
-					<p>Le anatre depongono le loro uova in silenzio.</p>
-					<p>Le galline invece schiamazzano come impazzite.</p>
-					<p className="mt3">Qual è la conseguenza?</p>
-					<p className="mb3">Tutto il mondo mangia uova di gallina.</p>
-					<p className="f4 f6-m silver mr3-m">Henry Ford</p>
+			<Flex width="w-70 w-100-m" class="center">
+				<div className="pa3 br3 near-black optima f3 fw5-m f5-m lh-copy bg-white">
+					<div className="mr3">
+						<p>Le anatre depongono le loro uova in silenzio.</p>
+						<p>Le galline invece schiamazzano come impazzite.</p>
+						<p className="mt3">Qual è la conseguenza?</p>
+						<p className="mb3">Tutto il mondo mangia uova di gallina.</p>
+						<p className="f4 f6-m silver mr3-m">Henry Ford</p>
+					</div>
 				</div>
-			</div>
+			</Flex>
 			<Spacer h="h5" />
-			<Lima />
+			<Land
+				to="/"
+				container="w-70 w-100-m center"
+				article="dim"
+				background="./img/lima/4.png"
+				title="Metro de Lima"
+				group="segnaletica"
+			/>
 			<Spacer h="h5" />
 
 			<Flex
 				width="w-70 w-100-m"
-				class="optima center flex-column-m flex-column-t justify-between bb bt pv3 b--silver"
+				class="optima center flex-column-m flex-column-t justify-between pa3 br3 bg-white"
 			>
 				<div className="w-40 w-90-m w-90-t  flex flex-column justify-between">
-					<div class="silver f2 ttu">portraits boutique</div>
+					<div class="silver f2 ttu ">
+						portraits boutique
+					</div>
 					<div className=" silver f3 f4-l f4-t f4-m lh-copy mv3 mr3">
 						È un progetto di fotografia ritrattistica iniziato nel 2008, con un suo
 						sito web completamente dedicato, che raccoglie la maggior parte dei miei
@@ -64,35 +75,33 @@ export const Portfolio = () => (
 				<Flex width="w-45 w-100-m" class="flex-column mr3 mr0-m">
 					<Tall
 						to="/progetti/yape"
-						container="w-70-m center-m mb4"
-						article="dim ba b--silver"
+						container="w-70-m center-m mb4 "
+						article="dim bg-white"
 						background="./img/yape.png"
 						title="Yape"
 						group="immagine coordinata"
 					/>
 					<LandE
 						to="https://www.discipline.design/work/yape"
-						container="w-100-m mb6-m"
-						article="dim"
+						container="w-100-m mb6-m "
+						article="dim "
 						background="./img/yape.jpg"
 						title="Yape"
-						group="interfaccia"
+						group="interfaccia · disciplinedesign"
 					/>
 				</Flex>
 				<Flex width="w-45 w-100-m" class="flex-column ml3 ml0-m">
 					<Land
 						to="/progetti/yape"
 						container="w-100-m mb4"
-						article="dim"
+						article="dim "
 						background="./img/corte/corte.png"
 						title="Corte d'Arte"
 						group="immagine coordinata"
 					/>
 
 					<StaTall
-						to="/progetti/yape"
 						container="w-100-m mb6-m"
-						article="dim"
 						background="/img/corte/posters/poster.png"
 						title="Corte d'Arte"
 						group="poster"
@@ -125,7 +134,7 @@ export const Portfolio = () => (
 					<Land
 						to="/progetti/yape"
 						container="w-100-m mb4"
-						article="dim  bg-light-gray"
+						article="dim  bg-white"
 						background="./img/manin/manin_1.png"
 						title="Villa Manin"
 						group="immagine coordinata"
@@ -149,7 +158,7 @@ export const Portfolio = () => (
 					/>
 					<StaLand
 						container="w-100-m mb4"
-						article="dim ba b--light-silver"
+						article="dim bg-white"
 						background="./img/Timeline.png"
 						title="Josef Müller Brockmann"
 						group="poster • timeline"
@@ -158,14 +167,7 @@ export const Portfolio = () => (
 			</Flex>
 			<Spacer h="h5 h3-m" />
 
-			<LandE
-				to="https://www.ideascudo.com/homepage/"
-				container="w-70 mr3 w-100-m center"
-				article="dim bg-light-gray"
-				background="./img/ideascudo/ideascudo_1.png"
-				title="Ideascudo"
-				group="logo"
-			/>
+			<Lima />
 
 			<Spacer h="h4 h3-m" />
 		</Main>
