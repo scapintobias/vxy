@@ -39,27 +39,6 @@ export const ProH = (props) => (
 	</section>
 );
 
-export const Place = (props) => (
-	<section className={props.dims}>
-		<div className="bg-silver dim whale" />
-		<div className="db mt3">
-			<p className="optima f3 black fw5 pb2">{props.title}</p>
-			<p className="optima f6 silver fw4 ttu">{props.group}</p>
-		</div>
-	</section>
-);
-
-export const PlaceT = (props) => (
-	<article className={props.article}>
-		<div className="aspect-ratio aspect-ratio--5x7">
-			<div className="aspect-ratio--object cover">{props.children}</div>
-		</div>
-	</article>
-);
-
-export const BoxT = (props) => (
-	<section className="bt bb b--silver pv3">{props.children}</section>
-);
 
 export const Flex = (props) => (
 	<section className={CN('flex', props.class, props.width)}>
@@ -68,11 +47,11 @@ export const Flex = (props) => (
 );
 
 export const Tall = (props) => (
-	<NavLink to={props.to} className={props.container}>
+	<NavLink to={props.to} className={CN('bg-white pa3 br4', props.container)}>
 		<article className={props.article}>
 			<div className="aspect-ratio aspect-ratio--5x7">
 				<div
-					className="aspect-ratio--object cover"
+					className="aspect-ratio--object cover br3"
 					style={{
 						background: `url(${props.background}) no-repeat top center`,
 					}}
@@ -89,7 +68,7 @@ export const Tall = (props) => (
 export const TallE = (props) => (
 	<a
 		href={props.to}
-		className={props.container}
+		className={CN('bg-white pa3 br4', props.container)}
 		noopener
 		noreferrer
 		target="blank"
@@ -97,7 +76,7 @@ export const TallE = (props) => (
 		<article className={props.article}>
 			<div className="aspect-ratio aspect-ratio--5x7">
 				<div
-					className="aspect-ratio--object cover"
+					className="aspect-ratio--object cover br3"
 					style={{
 						background: `url(${props.background}) no-repeat top center`,
 					}}
@@ -112,11 +91,11 @@ export const TallE = (props) => (
 );
 
 export const StaTall = (props) => (
-	<section className={props.container}>
+	<section className={CN('bg-white pa3 br4', props.container)}>
 		<article className={props.article}>
 			<div className="aspect-ratio aspect-ratio--5x7">
 				<Zoom>
-					<img src={props.background} className="whale" alt="img" />
+					<img src={props.background} className="whale br3" alt="img" />
 				</Zoom>
 			</div>
 		</article>
@@ -128,11 +107,11 @@ export const StaTall = (props) => (
 );
 
 export const Land = (props) => (
-	<NavLink to={props.to} className={props.container}>
+	<NavLink to={props.to} className={CN('bg-white pa3 br4', props.container)}>
 		<article className={props.article}>
 			<div className="aspect-ratio aspect-ratio--7x5">
 				<div
-					className="aspect-ratio--object cover"
+					className="aspect-ratio--object cover br3"
 					style={{
 						background: `url(${props.background}) no-repeat top center`,
 					}}
@@ -160,7 +139,7 @@ export const SlImg = (props) => (
 export const LandE = (props) => (
 	<a
 		href={props.to}
-		className={props.container}
+		className={CN('bg-white pa3 br4', props.container)}
 		noopener
 		noreferrer
 		target="blank"
@@ -168,7 +147,7 @@ export const LandE = (props) => (
 		<article className={props.article}>
 			<div className="aspect-ratio aspect-ratio--7x5">
 				<div
-					className="aspect-ratio--object cover"
+					className="aspect-ratio--object cover br3"
 					style={{
 						background: `url(${props.background}) no-repeat top center`,
 					}}
@@ -183,11 +162,11 @@ export const LandE = (props) => (
 );
 
 export const StaLand = (props) => (
-	<section className={props.container}>
+	<section className={CN('bg-white pa3 br4', props.container)}>
 		<article className={props.article}>
 			<div className="aspect-ratio aspect-ratio--7x5">
 				<Zoom>
-					<img src={props.background} className="whale" alt="img" />
+					<img src={props.background} className="whale br3" alt="img" />
 				</Zoom>
 			</div>
 		</article>
@@ -200,8 +179,8 @@ export const StaLand = (props) => (
 
 export const StaLandV = (props) => (
 	<section className="flex flex-column w-100">
-		<section className={props.container}>
-			<video src={props.background} autoPlay loop muted className="whale" />
+		<section className={CN('bg-white pa3 br4', props.container)}>
+			<video src={props.background} autoPlay loop muted className="whale br3" />
 
 			<div className="db mt2 mt1-m">
 				<p className="optima f3 f4-m black fw5 pb2 pb1-m">{props.title}</p>

@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './slider.scss';
 import { SlImg } from './components';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
 export default class Lima extends Component {
 	render() {
@@ -22,7 +22,7 @@ export default class Lima extends Component {
 		return (
 			<section className="w-70 w-100-m center">
 
-					<Slider {...settings} className="bg-white br3">
+					<Slider {...settings} className="bg-white br4">
 						<SlImg src="./img/ideascudo/ideascudo_1.png" />
 						<div class="pt-half pa3">
 							<img src="./img/lima/limalogo.png" alt="img" className=" whale" />

@@ -417,7 +417,9 @@ ul {
 .b--mid-gray {
 	border-color: #555;
 }
-
+.b--grey {
+	border-color: #F5F5F7;
+}
 .b--gray {
 	border-color: #777;
 }
@@ -2146,6 +2148,10 @@ code {
 
 .bg-mid-gray {
 	background-color: #555;
+}
+
+.bg-grey {
+	background-color: #F5F5F7;
 }
 
 .bg-gray {

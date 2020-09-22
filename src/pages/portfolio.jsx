@@ -46,12 +46,10 @@ export const Portfolio = () => (
 
 			<Flex
 				width="w-70 w-100-m"
-				class="optima center flex-column-m flex-column-t justify-between pa3 br3 bg-white"
+				class="optima center flex-column-m flex-column-t justify-between  br4 bg-white"
 			>
-				<div className="w-40 w-90-m w-90-t  flex flex-column justify-between">
-					<div class="silver f2 ttu ">
-						portraits boutique
-					</div>
+				<div className="w-40 w-90-m w-90-t pl3 pb3 pt2 flex flex-column justify-between">
+					<div class="silver f2 ttu ">portraits boutique</div>
 					<div className=" silver f3 f4-l f4-t f4-m lh-copy mv3 mr3">
 						È un progetto di fotografia ritrattistica iniziato nel 2008, con un suo
 						sito web completamente dedicato, che raccoglie la maggior parte dei miei
@@ -66,6 +64,7 @@ export const Portfolio = () => (
 				</div>
 				<StaTall
 					container="w-60 w-100-t w-100-m center-m"
+					article="bg-black pa3 br3"
 					background="./img/prigioniere/poster.png"
 					class="dn"
 				/>
@@ -76,7 +75,7 @@ export const Portfolio = () => (
 					<Tall
 						to="/progetti/yape"
 						container="w-70-m center-m mb4 "
-						article="dim bg-white"
+						article="dim bg-grey br3"
 						background="./img/yape.png"
 						title="Yape"
 						group="immagine coordinata"
@@ -134,7 +133,7 @@ export const Portfolio = () => (
 					<Land
 						to="/progetti/yape"
 						container="w-100-m mb4"
-						article="dim  bg-white"
+						article="dim  bg-grey br3"
 						background="./img/manin/manin_1.png"
 						title="Villa Manin"
 						group="immagine coordinata"
@@ -158,7 +157,7 @@ export const Portfolio = () => (
 					/>
 					<StaLand
 						container="w-100-m mb4"
-						article="dim bg-white"
+						article="dim ba bw1 b--light-gray br3 pa2"
 						background="./img/Timeline.png"
 						title="Josef Müller Brockmann"
 						group="poster • timeline"
