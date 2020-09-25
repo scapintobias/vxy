@@ -108,7 +108,7 @@ export const Portfolio = () => (
 				</Flex>
 			</Flex>
 			<Spacer h="h5 h3-m" />
-			<Link to="https://youtu.be/IhxD--LuNA0" class="link dim">
+			<Link to="https://youtu.be/IhxD--LuNA0" class="link">
 				<StaLandV
 					container="center w-95 w-100-m mb6-m"
 					background="./img/ducati.mp4"
