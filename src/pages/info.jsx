@@ -1,14 +1,15 @@
 import React from 'react';
 import { InfoHead } from './components/header';
-import { Main } from './components/components';
+import { Main, Flex } from './components/components';
 
 const Br = () => <br></br>;
 
 export const Info = () => (
 	<main>
 		<InfoHead />
+		
 		<Main>
-			<section className="flex db w-100 flex-column-m optima f3 lh-copy pb7 mb3 bb">
+			<section className="flex db w-100 flex-column-m optima f3 lh-copy pb7 mb3 bb bt">
 				<div className="w-50 w-100-m mb5">
 					<p>Ma in realtà.</p>
 					<p className="mb3">In parole povere.</p>
@@ -99,6 +100,46 @@ export const Info = () => (
 					+39 340 210 0166
 				</a>
 			</div>
+		</Main>
+
+		<Main>
+			<Flex
+				width="w-60 w-100-m"
+				class="justify-between flex-column-m optima mb4 h-auto"
+			>
+				<div className="w-100-m w-50 h7 db h-auto-m mb4-m">
+					<p className="f2 fw5 pb4">Design</p>
+					<p className="f3 fw4 pb2">Immagine coordinata</p>
+					<p className="f4 silver fw4 pb4 w-80 lh-copy">
+						Marchio, logo, logotipo, manuale d'immagine coordinata
+					</p>
+					<p className="f3 fw4 pb2">Materiale editoriale</p>
+					<p className="f4 silver fw4 pb4 w-80 lh-copy">
+						Cataloghi, riviste, impaginati
+					</p>
+					<p className="f3 fw4 pb2">Mostre e fiere</p>
+					<p className="f4 silver fw4 pb2 w-80">
+						Progettazione di allestimenti e materiale promozionale
+					</p>
+				</div>
+				<div className="w-100-m w-50 h7 h-auto-m mb4-m">
+					<p className="f2 fw5 pb4">Digitale</p>
+					<p className="f3 fw4 pb2">Siti web, App</p>
+					<p className="f4 silver fw4 pb4 w-80 lh-copy">
+						Progettazione di siti web e applicazioni, di ogni ordine di complessità
+					</p>
+					<p className="f3 fw4 pb2">Multimedia</p>
+					<p className="f4 silver fw4 pb2 w-80 lh-copy">
+						Realizzazione di video promozionali, sia in ripresa che in motion
+						graphics, o la combinazione tra le due
+					</p>
+					<p className="f3 fw4 pb2">Fotografia</p>
+					<p className="f4 silver fw4 pb2 w-80 lh-copy">
+						Realizzazione di fotografia commerciale, di prodotto, di architettura,
+						contenuti per siti web
+					</p>
+				</div>
+			</Flex>
 		</Main>
 	</main>
 );

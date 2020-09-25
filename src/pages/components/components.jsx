@@ -1,5 +1,9 @@
 import React from 'react';
 import CN from 'classnames';
+import { NavLink } from 'react-router-dom';
+
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 export const Main = ({ children }) => (
 	<section className="w-100 overflow-hidden ph3 ph2-m center mv4">
@@ -13,6 +17,8 @@ export const Img = (props) => (
 		{props.children}
 	</div>
 );
+
+export const Spacer = (props) => <div className={CN('flex w-100', props.h)} />;
 
 export const Tit = (props) => (
 	<section className="black mh3 optima absolute z-max bottom-0 mb3">
@@ -33,20 +39,160 @@ export const ProH = (props) => (
 	</section>
 );
 
-export const Place = (props) => (
-	<section className={props.dims}>
-		<div className="bg-silver dim whale" />
-		<div className="db mt3">
-			<p className="optima f3 black fw5 pb2">{props.title}</p>
-			<p className="optima f6 silver fw4 ttu">
-				{props.group} - {props.anno}
-			</p>
+export const Flex = (props) => (
+	<section className={CN('flex', props.class, props.width)}>
+		{props.children}
+	</section>
+);
+
+export const Tall = (props) => (
+	<NavLink to={props.to} className={CN('bg-white pa3 br4', props.container)}>
+		<article className={props.article}>
+			<div className="aspect-ratio aspect-ratio--5x7">
+				<div
+					className="aspect-ratio--object cover br3"
+					style={{
+						background: `url(${props.background}) no-repeat top center`,
+					}}
+				/>
+			</div>
+		</article>
+		<div className="db mt2 mt1-m">
+			<p className="optima f3 f4-m black fw5 pb2 pb1-m">{props.title}</p>
+			<p className="optima f6 silver fw4 ttu">{props.group}</p>
+		</div>
+	</NavLink>
+);
+
+export const TallE = (props) => (
+	<a
+		href={props.to}
+		className={CN('bg-white pa3 br4', props.container)}
+		noopener
+		noreferrer
+		target="blank"
+	>
+		<article className={props.article}>
+			<div className="aspect-ratio aspect-ratio--5x7">
+				<div
+					className="aspect-ratio--object cover br3"
+					style={{
+						background: `url(${props.background}) no-repeat top center`,
+					}}
+				/>
+			</div>
+		</article>
+		<div className="db mt2 mt1-m">
+			<p className="optima f3 f4-m black fw5 pb2 pb1-m">{props.title}</p>
+			<p className="optima f6 silver fw4 ttu">{props.group}</p>
+		</div>
+	</a>
+);
+
+export const StaTall = (props) => (
+	<section className={CN('bg-white pa3 br4', props.container)}>
+		<article className={props.article}>
+			<div className="aspect-ratio aspect-ratio--5x7">
+				<Zoom>
+					<img src={props.background} className="whale" alt="img" />
+				</Zoom>
+			</div>
+		</article>
+		<div className={CN('mt2 mt1-m', props.class)}>
+			<p className="optima f3 f4-m black fw5 pb2 pb1-m">{props.title}</p>
+			<p className="optima f6 silver fw4 ttu">{props.group}</p>
 		</div>
 	</section>
 );
 
-export const Flex = ({ children }, props) => (
-	<section className={CN('flex', props.class)}>{children}</section>
+export const Land = (props) => (
+	<NavLink to={props.to} className={CN('bg-white pa3 br4', props.container)}>
+		<article className={props.article}>
+			<div className="aspect-ratio aspect-ratio--7x5">
+				<div
+					className="aspect-ratio--object cover br3"
+					style={{
+						background: `url(${props.background}) no-repeat top center`,
+					}}
+				/>
+			</div>
+		</article>
+		<div className="db mt2 mt1-m">
+			<p className="optima f3 f4-m black fw5 pb2 pb1-m">{props.title}</p>
+			<p className="optima f6 silver fw4 ttu">{props.group}</p>
+		</div>
+	</NavLink>
+);
+
+export const SlImg = (props) => (
+	<div className="aspect-ratio aspect-ratio--7x5">
+		<div
+			className="aspect-ratio--object cover"
+			style={{
+				background: `url(${props.src}) no-repeat top center`,
+			}}
+		/>
+	</div>
+);
+
+export const LandE = (props) => (
+	<a
+		href={props.to}
+		className={CN('bg-white pa3 br4', props.container)}
+		noopener
+		noreferrer
+		target="blank"
+	>
+		<article className={props.article}>
+			<div className="aspect-ratio aspect-ratio--7x5">
+				<div
+					className="aspect-ratio--object cover br3"
+					style={{
+						background: `url(${props.background}) no-repeat top center`,
+					}}
+				/>
+			</div>
+		</article>
+		<div className="db mt2 mt1-m">
+			<p className="optima f3 f4-m black fw5 pb2 pb1-m">{props.title}</p>
+			<p className="optima f6 silver fw4 ttu">{props.group}</p>
+		</div>
+	</a>
+);
+
+export const StaLand = (props) => (
+	<section className={CN('bg-white pa3 br4', props.container)}>
+		<article className={props.article}>
+			<div className="aspect-ratio aspect-ratio--7x5">
+				<Zoom>
+					<img src={props.background} className="whale br3" alt="img" />
+				</Zoom>
+			</div>
+		</article>
+		<div className="db mt2 mt1-m">
+			<p className="optima f3 f4-m black fw5 pb2 pb1-m">{props.title}</p>
+			<p className="optima f6 silver fw4 ttu">{props.group}</p>
+		</div>
+	</section>
+);
+
+export const StaLandV = (props) => (
+	<section className="flex flex-column w-100">
+		<section className={CN('bg-white pa3 br4', props.container)}>
+			<video src={props.background} autoPlay loop muted className="whale br3" />
+
+			<div className="db mt2 mt1-m">
+				<p className="optima f3 f4-m black fw5 pb2 pb1-m">{props.title}</p>
+				<p className="optima f6 silver fw4 ttu">{props.group}</p>
+			</div>
+		</section>
+	</section>
+);
+
+export const Link = (props) => (
+	<a href={props.to} noopener noreferrer target="blank" className={props.class}>
+		{props.children}
+	</a>
 );
 
 export const IgW = () => (
@@ -97,12 +243,4 @@ export const IgB = () => (
 			<circle id="instagram" fill="#000" cx="15.2" cy="4.9" r="1.2" />
 		</svg>
 	</a>
-);
-
-export const Footer = () => (
-	<section className="optima silver mh2 mb2 flex flex-row justify-between dn-t dn-m">
-		<div>© 2020 Tobias Scapin</div>
-		<div>Via Pastrengo 4 — 30026 Portogruaro (VE)</div>
-		<div>+39 3402100166 — info@scapintobias.xyz</div>
-	</section>
 );

@@ -9,13 +9,21 @@ export const Yape = () => (
 		<PortHead />
 		<Main>
 			<ProH title="Yape" subtitle="immagine coordinata - 2018">
-				<video src="../img/yape/yape.mp4" className="whale" />
+				<video
+					
+					autoPlay
+					src="../img/yape/yape.mp4"
+					className="whale flex w-100 w-70-ns center br4"
+					id="vid"
+				/>
 			</ProH>
 
-			<div className=" bg-light-gray w-100 mb7">
-				<div className="flex w-100 flex-column-m justify-between">
-					<div className="optima pa4 f3 fw4">Schemi preparatori</div>
-					<Img src="../img/yape/yapetype.jpg" class=" ma4 w-60 b--white ba bw5" />
+			<div className="flex justify-center  w-100 w-70-ns center mb7">
+				<div className="bg-white br4 pa3 flex flex-column-m justify-between">
+					<div className="optima  f3 fw4 ttu">Schemi preparatori</div>
+					<div className="pa3 bg-agray br4 w-60">
+						<Img src="../img/yape/yapetype.jpg" class="pa3 bg-white br3" />
+					</div>
 				</div>
 			</div>
 		</Main>
