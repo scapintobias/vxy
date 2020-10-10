@@ -105,6 +105,18 @@ export const StaTall = (props) => (
 	</section>
 );
 
+export const StatTall = (props) => (
+	<section className={CN('bg-white pa3 br4', props.container)}>
+		<article className={props.article}>
+			<div className="aspect-ratio aspect-ratio--5x7">
+				<Zoom>
+					<img src={props.background} className="whale" alt="img" />
+				</Zoom>
+			</div>
+		</article>
+	</section>
+);
+
 export const Land = (props) => (
 	<NavLink to={props.to} className={CN('bg-white pa3 br4', props.container)}>
 		<article className={props.article}>
@@ -173,6 +185,18 @@ export const StaLand = (props) => (
 			<p className="optima f3 f4-m black fw5 pb2 pb1-m">{props.title}</p>
 			<p className="optima f6 silver fw4 ttu">{props.group}</p>
 		</div>
+	</section>
+);
+
+export const StalLand = (props) => (
+	<section className={CN('bg-white pa3 br4', props.container)}>
+		<article className={props.article}>
+			<div className="aspect-ratio aspect-ratio--7x5">
+				<Zoom>
+					<img src={props.background} className="whale" alt="img" />
+				</Zoom>
+			</div>
+		</article>
 	</section>
 );
 

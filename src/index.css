@@ -221,6 +221,21 @@ ul {
 
 }
 
+.pop {
+	color: #df4e10;
+}
+
+.friendly {
+	color: #5ebdd4;
+}
+
+.original {
+	color: #f4cf00;
+}
+
+.functional {
+	color: #d3cfc9;
+}
 
 
 .aspect-ratio {

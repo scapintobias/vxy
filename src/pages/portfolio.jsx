@@ -14,7 +14,7 @@ import {
 	StaLandV,
 } from './components/components';
 
-import Lima from './components/slider';
+import Lima from './components/slider lima';
 
 export const Portfolio = () => (
 	<main>
